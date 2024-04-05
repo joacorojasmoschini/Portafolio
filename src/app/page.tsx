@@ -1,7 +1,16 @@
-export default function Home() {
+"use client";
+import { motion } from "framer-motion";
+
+const Home = () => {
   return (
-    <section className="">
-      <h1 className="">FULL STACK DEVELOPER</h1>
-    </section>
+    <motion.div
+      className="w-full"
+      initial={{ x: "100%" }}
+      animate={{ x: "0%" }}
+      transition={{ delay: 0.8, duration: 1 }}
+    >
+      <h1 className="text-8xl">FULL STACK DEVELOPER</h1>
+    </motion.div>
   );
-}
+};
+export default Home;
