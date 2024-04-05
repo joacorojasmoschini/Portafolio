@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Transition from "@/components/Transition";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] , weight: "500"});
 
 export const metadata: Metadata = {
   title: "Joaquín Rojas Moschini",

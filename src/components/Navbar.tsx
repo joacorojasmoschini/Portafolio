@@ -34,14 +34,14 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav className="flex justify-center items-center fixed bottom-0 w-full z-50 sm:mb-2">
-      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center text-3xl md:text-xl py-2 px-10 gap-x-10 sm:rounded-full bg-white/10 w-full lg:w-auto">
+    <nav className="flex justify-center items-center fixed bottom-0 w-full z-20 sm:mb-2">
+      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center text-3xl md:text-xl py-2 px-10 gap-x-10 sm:rounded-full bg-light-blue/20 w-full lg:w-auto">
         {navData.map((data, index) => {
           return (
             <Link
               href={data.path}
               className={`flex flex-col justify-center items-center ${
-                data.path === pathname ? "text-red-500" : "text-white"
+                data.path === pathname ? "text-light-red" : "text-white"
               }`}
             >
               <div>{data.icon} </div>

@@ -3,8 +3,9 @@ import { AnimatePresence } from "framer-motion";
 import NavBar from "./Navbar";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { ReactNode } from "react";
 
-const Transition = ({ children }) => {
+const Transition = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
   const transitionVariants = {
@@ -16,18 +17,18 @@ const Transition = ({ children }) => {
   };
   return (
     <AnimatePresence mode="wait">
-      <div
+      <main
         key={pathname}
-        className="bg-black h-screen w-screen text-white overflow-hidden"
+        className="bg-gradient-to-r from-blue to-blue/90 h-screen w-screen text-white overflow-hidden"
       >
         <motion.div
-          className="top-0 bottom-0 right-full fixed z-30 bg-red-900 w-screen h-screen "
+          className="top-0 bottom-0 right-full fixed z-30 bg-red w-screen h-screen "
           animate={{ x: "0%", width: "0%" }}
           exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
           transition={{ delay: 0.2, duration: 0.5, ease: "easeInOut" }}
         />
         <motion.div
-          className="top-0 bottom-0 right-full fixed z-30 bg-blue-950 w-screen h-screen "
+          className="top-0 bottom-0 right-full fixed z-30 bg-blue w-screen h-screen "
           animate={{ x: "0%", width: "0%" }}
           exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
           transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
@@ -42,22 +43,20 @@ const Transition = ({ children }) => {
           {pathname === "/" ? "HOME" : "" || pathname.toUpperCase().substring(1)}
         </motion.div>
         <motion.div
-          className="top-0 bottom-0 right-full fixed z-30 bg-blue-950 w-screen h-screen "
+          className="top-0 bottom-0 right-full fixed z-30 bg-blue w-screen h-screen "
           animate={{ x: "0%", width: "0%" }}
           initial={{ x: "100%", width: "100%" }}
           transition={{ delay: 1, duration: 0.6, ease: "easeInOut" }}
         />
         <motion.div
-          className="top-0 bottom-0 right-full fixed z-20 bg-red-900 w-screen h-screen "
+          className="top-0 bottom-0 right-full fixed z-20 bg-red w-screen h-screen "
           animate={{ x: "0%", width: "0%" }}
           initial={{ x: "100%", width: "100%" }}
           transition={{ delay: 1.1, duration: 0.6, ease: "easeInOut" }}
         />
-        <div>
           <NavBar />
           {children}
-        </div>
-      </div>
+      </main>
     </AnimatePresence>
   );
 };
