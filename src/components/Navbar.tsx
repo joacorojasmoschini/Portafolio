@@ -23,8 +23,8 @@ const NavBar = () => {
       icon: <HiUser />,
     },
     {
-      name: "Work",
-      path: "/work",
+      name: "Projects",
+      path: "/projects",
       icon: <HiRectangleGroup />,
     },
     {

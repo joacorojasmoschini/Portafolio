@@ -5,7 +5,7 @@ import Image from "next/image";
 const Home = () => {
   return (
     <motion.div
-      className="w-full h-screen"
+      className="w-screen h-screen"
       initial={{ x: "100%" }}
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
@@ -20,8 +20,8 @@ const Home = () => {
             </h1>
             <p className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 text-white/70">
               Bienvenidos a mi portafolio, mi nombre es
-              <span className="text-light-red font-semibold"> Joaquín</span>. Soy
-              un desarrollador full stack con experiencia en la creación de
+              <span className="text-light-red font-semibold"> Joaquín</span>.
+              Soy un desarrollador full stack con experiencia en la creación de
               aplicaciones web. Me apasiona transformar ideas en experiencias
               digitales. Estoy constantemente aprendiendo y explorando nuevas
               tecnologías para mejorar mis habilidades y ofrecer productos de
