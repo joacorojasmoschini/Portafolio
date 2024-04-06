@@ -6,14 +6,14 @@ export const projectsData = [
     image: "/greenhouse/greenhouse.jpeg",
     deploy: "https://www.greenhousevla.com.ar",
     description:
-      "Proyecto Front-end realizado para el rubro del turismo un Bed & Breakfast.",
+      "Proyecto Front-end realizado para el rubro del turismo un Bed & Breakfast. Es una app multi-idioma (español, portugues e ingles) ",
     repository: "https://github.com/joacorojasmoschini/GreenHouse",
   },
   {
     id: 2,
-    title: "GREEN HOUSE B&B",
+    title: "FUNDACION ANIMAL",
     skills: ["Next.js", "Tailwind", "Typescript", "AOS", "Nodemailer"],
-    image: "/greenhouse/greenhouse.jpeg",
+    image: "/greenhouse/fundacion-animal.jpg",
     deploy: "https://www.greenhousevla.com.ar",
     description:
       "Proyecto Front-end realizado para el rubro del turismo un Bed & Breakfast.",
