@@ -35,7 +35,7 @@ const NavBar = () => {
   ];
   return (
     <nav className="flex justify-center items-center fixed bottom-0 w-full z-20 sm:mb-2">
-      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center text-3xl md:text-xl py-2 px-10 gap-x-10 sm:rounded-full bg-light-blue/20 w-full lg:w-auto">
+      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center py-2 px-10 gap-x-10 sm:rounded-full bg-light-blue/20 w-full lg:w-auto">
         {navData.map((data, index) => {
           return (
             <Link
@@ -44,8 +44,8 @@ const NavBar = () => {
                 data.path === pathname ? "text-light-red" : "text-white"
               }`}
             >
-              <div>{data.icon} </div>
-              <div className="hidden md:block">{data.name}</div>
+              <div className="text-3xl md:text-xl">{data.icon} </div>
+              <div className="hidden md:block text-xs">{data.name}</div>
             </Link>
           );
         })}
