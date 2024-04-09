@@ -9,13 +9,6 @@ import { ReactNode } from "react";
 const Transition = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
-  const transitionVariants = {
-    animte: {
-      x: "0%",
-      width: "0%",
-    },
-    exit: {},
-  };
   return (
     <AnimatePresence mode="wait">
       <main

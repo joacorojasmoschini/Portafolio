@@ -39,6 +39,7 @@ const NavBar = () => {
         {navData.map((data, index) => {
           return (
             <Link
+              key={index}
               href={data.path}
               className={`flex flex-col justify-center items-center ${
                 data.path === pathname ? "text-light-red" : "text-white"

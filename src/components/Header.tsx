@@ -8,7 +8,7 @@ const Header = () => {
       <div className="w-full flex justify-between text-xl">
         <div>
           <Link href="/">
-            LOGO
+            JOA<span className="text-light-red">DEV</span>
           </Link>
         </div>
         <div className="flex gap-x-2 text-3xl">
