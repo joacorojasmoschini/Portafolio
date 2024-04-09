@@ -5,14 +5,14 @@ import Image from "next/image";
 const Home = () => {
   return (
     <motion.div
-      className="w-screen h-screen"
+      className="w-screen"
       initial={{ x: "100%" }}
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
     >
-      <div className="h-full w-full flex max-w-screen-lg mx-auto justify-center items-center">
-        <div className="h-full max-w-screen-lg mx-auto">
-          <div className="text-center flex flex-col h-full justify-center lg:text-left mx-auto container">
+      <div className="w-full flex max-w-screen-lg mx-auto ">
+        <div className="mx-auto">
+          <div className="text-center flex flex-col h-full justify-center lg:text-left container">
             <h4 className="text-white/80">FULL STACK DEVELOPER</h4>
             <h1 className="text-3xl mb-6">
               TRANSFORAMANDO IDEAS <br />
@@ -21,11 +21,26 @@ const Home = () => {
             <p className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 text-white/70">
               Bienvenidos a mi portafolio, mi nombre es
               <span className="text-light-red font-semibold"> Joaquín</span>.
-              Soy un desarrollador full stack con experiencia en la creación de
-              aplicaciones web. Me apasiona transformar ideas en experiencias
-              digitales. Estoy constantemente aprendiendo y explorando nuevas
-              tecnologías para mejorar mis habilidades y ofrecer productos de
-              alta calidad a mis clientes.
+              Soy un{" "}
+              <span className="text-light-red font-semibold">
+                desarrollador full stack
+              </span>{" "}
+              con experiencia en la creación de{" "}
+              <span className="text-light-red font-semibold">
+                aplicaciones web
+              </span>
+              . Me apasiona{" "}
+              <span className="text-light-red font-semibold">
+                transformar ideas
+              </span>{" "}
+              en experiencias digitales. Estoy constantemente aprendiendo y
+              explorando nuevas tecnologías para mejorar mis habilidades y
+              ofrecer productos de{" "}
+              <span className="text-light-red font-semibold">
+                {" "}
+                alta calidad
+              </span>{" "}
+              a mis clientes.
             </p>
           </div>
         </div>

@@ -9,7 +9,11 @@ const About = () => {
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
     >
-      <div>About page</div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </motion.div>
   );
 };

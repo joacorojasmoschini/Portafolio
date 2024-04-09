@@ -2,9 +2,15 @@
 import { motion } from "framer-motion";
 import Card from "@/components/Card";
 import { projectsData } from "@/lib/data";
-import React from "react";
+import React, { useRef } from "react";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
-const Work = () => {
+const Projects = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const scrollToRef = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.div
       className="w-full"
@@ -14,19 +20,24 @@ const Work = () => {
     >
       <div className="max-w-screen-lg mx-auto py-16">
         <div className="text-center">
-          <h2 className="text-3xl text-light-red">PROJECTS</h2>
+          <h2 className="text-3xl text-white pb-6">PROYECTOS <span className="text-light-red">.</span></h2>
           <p className="max-w-sm mx-auto">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            commodi dolor, dolorum dicta quam ea consectetur aut atque numquam,
-            ipsum, harum impedit exercitationem deserunt cumque praesentium
-            mollitia incidunt quod iure.
+            Te invito a que eches un vistazo a mis proyectos realizados. Vas a
+            encontrar trabajos Front-end, Back-end y Full-Stack.
           </p>
+          <MdKeyboardDoubleArrowDown
+            onClick={scrollToRef}
+            className="text-5xl text-red mx-auto my-16 cursor-pointer"
+          />
         </div>
-        <div className="overflow-y flex flex-col justify-center items-center">
+        <div
+          ref={ref}
+          className="overflow-y flex flex-col justify-center items-center"
+        >
           {projectsData.map((project, index) => {
             return (
-              <React.Fragment key={index}>
-                <Card {...project}/>
+              <React.Fragment key={project.id + index}>
+                <Card {...project} />
               </React.Fragment>
             );
           })}
@@ -36,4 +47,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

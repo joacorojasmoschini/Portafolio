@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaGithub } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
 
 const Header = () => {
   return (
@@ -9,10 +10,20 @@ const Header = () => {
           <Link href="/">
             LOGO
           </Link>
-          </div>
-        <div className="flex gap-x-2">
-          <FaLinkedin className="hover:text-red cursor-pointer duration-300"/>
-          <FaGithub className="hover:text-red cursor-pointer duration-300"/>
+        </div>
+        <div className="flex gap-x-2 text-3xl">
+          <Link
+            href="https://www.linkedin.com/in/joaqu%C3%ADn-rojas-moschini-47b42720b/"
+            target="_blank"
+          >
+            <FaLinkedin className="hover:text-light-red cursor-pointer duration-300" />
+          </Link>
+          <Link href="https://github.com/joacorojasmoschini" target="_blank">
+            <FaGithub className="hover:text-light-red cursor-pointer duration-300" />
+          </Link>
+          <Link href="https://wa.me/542944124324" target="_blank">
+            <FaWhatsapp className="hover:text-light-red cursor-pointer duration-300" />
+          </Link>
         </div>
       </div>
     </header>
