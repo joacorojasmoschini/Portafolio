@@ -1,6 +1,5 @@
 "use client";
-
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projectsData } from "@/lib/data";
@@ -25,6 +24,9 @@ export default function Card({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const [showRepoTooltip, setShowRepoTooltip] = useState(false);
+  const [showDeployTooltip, setShowDeployTooltip] = useState(false);
 
   return (
     <motion.div
@@ -53,16 +55,41 @@ export default function Card({
           </ul>
           <div className="flex justify-between text-3xl pt-4">
             {repository ? (
-              <Link href={repository}>
-                <FaGithub className="hover:text-light-red cursor-pointer duration-500" />
-              </Link>
+              <div
+                className="relative"
+                onMouseEnter={() => setShowRepoTooltip(true)}
+                onMouseLeave={() => setShowRepoTooltip(false)}
+              >
+                <Link href={repository}>
+                  <FaGithub className="hover:text-light-red cursor-pointer duration-500" />
+                </Link>
+                {showRepoTooltip && (
+                  <span className="absolute bg-blue text-white px-2 py-1 rounded-md text-xs bottom-full left-1/2 transform -translate-x-1/2 mb-1">
+                    Repositorio
+                  </span>
+                )}
+              </div>
             ) : (
               ""
             )}
-
-            <Link href={deploy}>
-              <MdOutlineDevices className="hover:text-light-red cursor-pointer duration-500" />
-            </Link>
+            {deploy ? (
+              <div
+                className="relative"
+                onMouseEnter={() => setShowDeployTooltip(true)}
+                onMouseLeave={() => setShowDeployTooltip(false)}
+              >
+                <Link href={deploy}>
+                  <MdOutlineDevices className="hover:text-light-red cursor-pointer duration-500" />
+                </Link>
+                {showDeployTooltip && (
+                  <span className="absolute bg-blue text-white px-2 py-1 rounded-md text-xs bottom-full left-1/2 transform -translate-x-1/2 mb-1">
+                    Deploy
+                  </span>
+                )}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
 

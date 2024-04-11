@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
 
 const Header = () => {
   return (
-    <header className="max-w-screen-lg mx-auto my-4">
+    <header className="max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto py-4">
       <div className="w-full flex justify-between text-xl">
         <div>
           <Link href="/">

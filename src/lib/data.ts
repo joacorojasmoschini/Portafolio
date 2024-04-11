@@ -1,3 +1,5 @@
+import { TbBrandNextjs } from "react-icons/tb";
+
 export const projectsData = [
   {
     id: 1,
