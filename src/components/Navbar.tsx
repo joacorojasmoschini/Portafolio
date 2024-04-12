@@ -35,7 +35,7 @@ const NavBar = () => {
   ];
   return (
     <nav className="flex justify-center items-center fixed bottom-0 w-full z-20 sm:mb-2">
-      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center py-2 px-10 gap-x-10 sm:rounded-full bg-light-blue/20 w-full lg:w-auto">
+      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center py-2 px-10 gap-x-10 sm:rounded-full bg-blue/80 w-full lg:w-auto">
         {navData.map((data, index) => {
           return (
             <Link
