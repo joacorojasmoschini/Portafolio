@@ -31,7 +31,7 @@ const Home = () => {
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
     >
-      <div className="w-full flex max-w-screen-lg mx-auto ">
+      <div className="w-full flex max-w-screen-lg mx-auto">
         <div className="mx-auto">
           <div className="text-center flex flex-col h-full justify-center lg:text-left container">
             <h4 className="text-white/80">FULL STACK DEVELOPER</h4>
@@ -72,7 +72,7 @@ const Home = () => {
                   key={index}
                   className="flex bg-light-blue/10 p-4 gap-x-2 rounded-sm items-center justify-center hover:bg-light-blue/50 duration-200"
                 >
-                  <div className="text-light-red">{data.icon}</div>
+                  <div className="text-light-red text-xl">{data.icon}</div>
                   <div>{data.name}</div>
                 </Link>
               ))}
@@ -82,7 +82,7 @@ const Home = () => {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2"
+              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2 rounded-sm"
             >
               <div className="text-blue">
                 <FaDownload />
