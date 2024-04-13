@@ -1,6 +1,5 @@
 "use client";
-
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projectsData } from "@/lib/data";
@@ -26,6 +25,9 @@ export default function Card({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const [showRepoTooltip, setShowRepoTooltip] = useState(false);
+  const [showDeployTooltip, setShowDeployTooltip] = useState(false);
+
   return (
     <motion.div
       ref={ref}
@@ -33,18 +35,18 @@ export default function Card({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-8 sm:mb-8 last:mb-0"
     >
-      <section className="max-w-[42rem] border border-none rounded-lg overflow-hidden sm:pr-8 relative h-full hover:bg-gray-200 transition sm:group-even:pl-8 text-white bg-gradient-to-br from-light-blue/20 via-light-blue/10 to-red/40 hover:bg-light-blue/10 drop-shadow-md">
+      <section className="max-w-screen-md border border-none rounded-md overflow-hidden sm:pr-8 relative h-full hover:bg-gray-200 transition sm:group-even:pl-8 text-white bg-gradient-to-br from-light-blue/20 via-light-blue/10 to-red/40 hover:bg-light-blue/10 drop-shadow-md">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-2 text-sm">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="flex flex-wrap gap-2 sm:mt-auto">
             {skills.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-red/40 px-3 py-1 text-xs uppercase tracking-wider rounded-full text-white/70"
                 key={index}
               >
                 {tag}
@@ -52,12 +54,42 @@ export default function Card({
             ))}
           </ul>
           <div className="flex justify-between text-3xl pt-4">
-            <Link href={repository}>
-              <FaGithub className="hover:text-light-red cursor-pointer duration-500" />
-            </Link>
-            <Link href={deploy}>
-              <MdOutlineDevices className="hover:text-light-red cursor-pointer duration-500" />
-            </Link>
+            {repository ? (
+              <div
+                className="relative"
+                onMouseEnter={() => setShowRepoTooltip(true)}
+                onMouseLeave={() => setShowRepoTooltip(false)}
+              >
+                <Link href={repository}>
+                  <FaGithub className="hover:text-light-red cursor-pointer duration-500" />
+                </Link>
+                {showRepoTooltip && (
+                  <span className="absolute bg-blue text-white px-2 py-1 rounded-md text-xs bottom-full left-1/2 transform -translate-x-1/2 mb-1">
+                    Repositorio
+                  </span>
+                )}
+              </div>
+            ) : (
+              ""
+            )}
+            {deploy ? (
+              <div
+                className="relative"
+                onMouseEnter={() => setShowDeployTooltip(true)}
+                onMouseLeave={() => setShowDeployTooltip(false)}
+              >
+                <Link href={deploy}>
+                  <MdOutlineDevices className="hover:text-light-red cursor-pointer duration-500" />
+                </Link>
+                {showDeployTooltip && (
+                  <span className="absolute bg-blue text-white px-2 py-1 rounded-md text-xs bottom-full left-1/2 transform -translate-x-1/2 mb-1">
+                    Deploy
+                  </span>
+                )}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
 
@@ -65,9 +97,9 @@ export default function Card({
           src={image}
           alt="Project I worked on"
           quality={95}
-          width={1000}
+          width={475}
           height={400}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          className="absolute hidden sm:block top-8 -right-40 rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3

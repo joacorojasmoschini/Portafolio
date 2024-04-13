@@ -9,18 +9,11 @@ import { ReactNode } from "react";
 const Transition = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
 
-  const transitionVariants = {
-    animte: {
-      x: "0%",
-      width: "0%",
-    },
-    exit: {},
-  };
   return (
     <AnimatePresence mode="wait">
       <main
         key={pathname}
-        className="bg-gradient-to-r from-blue to-blue/90 text-white overflow-hidden"
+        className="bg-gradient-to-r from-blue to-blue/90 min-h-screen text-white overflow-hidden"
       >
         <motion.div
           className="top-0 bottom-0 right-full fixed z-40 bg-red w-screen h-screen "
