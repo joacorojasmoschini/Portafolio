@@ -27,9 +27,11 @@ import { useRef } from "react";
 import React from "react";
 
 const About = () => {
-  const containerRef = useRef();
+  const containerRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
 
+  console.log(scrollYProgress);
+  
   const skillsData = [
     {
       title: "Back-end",
