@@ -34,7 +34,7 @@ const Transition = ({ children }: { children: ReactNode }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {pathname.toUpperCase().substring(1)}
+          {pathname.toUpperCase().substring(1).replace(/-/g, ' ')}
         </motion.div>
         <motion.div
           className="top-0 bottom-0 right-full fixed z-40 bg-blue w-screen h-screen "

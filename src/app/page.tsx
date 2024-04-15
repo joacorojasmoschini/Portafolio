@@ -8,18 +8,18 @@ import { FaDownload } from "react-icons/fa6";
 const Home = () => {
   const pathData = [
     {
-      name: "About",
-      path: "/about",
+      name: "Acerca de mi",
+      path: "/acerca-de-mi",
       icon: <HiUser />,
     },
     {
-      name: "Projects",
-      path: "/projects",
+      name: "Proyectos",
+      path: "/proyectos",
       icon: <HiRectangleGroup />,
     },
     {
-      name: "Contact",
-      path: "/contact",
+      name: "Contacto",
+      path: "/contacto",
       icon: <HiEnvelopeOpen />,
     },
   ];
@@ -82,7 +82,7 @@ const Home = () => {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2 rounded-sm"
+              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2 sm:w-fit rounded-sm"
             >
               <div className="text-blue">
                 <FaDownload />

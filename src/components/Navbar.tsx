@@ -13,29 +13,29 @@ const NavBar = () => {
 
   const navData = [
     {
-      name: "Home",
+      name: "Inicio",
       path: "/",
       icon: <HiHome />,
     },
     {
-      name: "About",
-      path: "/about",
+      name: "Acerca de mi",
+      path: "/acerca-de-mi",
       icon: <HiUser />,
     },
     {
-      name: "Projects",
-      path: "/projects",
+      name: "Proyectos",
+      path: "/proyectos",
       icon: <HiRectangleGroup />,
     },
     {
-      name: "Contact",
-      path: "/contact",
+      name: "Contacto",
+      path: "/contacto",
       icon: <HiEnvelopeOpen />,
     },
   ];
   return (
     <nav className="flex justify-center items-center fixed bottom-0 w-full z-20 sm:mb-2">
-      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center py-2 px-10 gap-x-10 sm:rounded-full bg-blue/80 w-full lg:w-auto">
+      <div className="max-w-screen-sm flex items-center justify-between lg:justify-center py-2 px-10 gap-x-10 sm:rounded-full bg-blue md:bg-blue/80 w-full lg:w-auto">
         {navData.map((data, index) => {
           return (
             <Link
