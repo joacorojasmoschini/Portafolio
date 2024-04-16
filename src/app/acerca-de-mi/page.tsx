@@ -26,18 +26,17 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaNodeJs, FaGithub, FaGitAlt } from "react-icons/fa6";
 import React, { useRef } from "react";
+import Education from "@/components/Education";
 
 const About = () => {
   const containerRef = useRef<HTMLElement | null>(null);
   const skillTitleRef = useRef<HTMLDivElement | null>(null);
   const skillRef = useRef<HTMLDivElement | null>(null);
-  const experienceRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const isSkillInView = useInView(skillRef);
   const isSkillTitleInView = useInView(skillTitleRef);
-  const isExperienceInView = useInView(experienceRef);
 
   const skillsData = [
     {
@@ -123,7 +122,7 @@ const About = () => {
           ref={skillTitleRef}
           initial={{ x: -300 }}
           animate={isSkillTitleInView ? { x: 0 } : {}}
-          className="font-bold text-3xl"
+          className="font-bold text-2xl"
         >
           SKILLS<span className="text-light-red">.</span>
         </motion.h3>
@@ -143,9 +142,10 @@ const About = () => {
         </div>
       </div>
       <div className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
-        <h3 className="font-bold text-3xl">
-          EXPERIENCIA <span className="text-light-red">.</span>
+        <h3 className="font-bold text-2xl">
+          EDUCACIÓN <span className="text-light-red">.</span>
         </h3>
+        <Education />
       </div>
     </motion.div>
   );

@@ -1,5 +1,3 @@
-import { TbBrandNextjs } from "react-icons/tb";
-
 export const projectsData = [
   {
     id: 1,
@@ -48,3 +46,34 @@ export const projectsData = [
     repository: "https://github.com/T1Scaynet/BE-Shelter",
   },
 ];
+
+export const experienceData = [
+  {
+    id: 1,
+    title: "Full Stack Developer",
+    subtitle: "Henry Bootcamp",
+    description: "Bootcamp de 700 hs. de cursado que me sirvio para acentar mis conocimientos actuales como desarrollador full stack. Estudié tecnologias como React, Nodejs, HTML, CSS, Redux, Express, PostgresSQL entre otras. Tambien metodologias agiles como SCRUM, además vimos algoritmos y estructuras de datos.",
+    date: "Ago 2022 - Mar 2023",
+  },
+  {
+    id: 2,
+    title: "Autodidacta",
+    subtitle: "Aprendizaje independiente",
+    description: "Aprendizaje autodidacta en tecnologías como Typescript, Nextjs, Tailwind, AWS, MongoDB, entre otras. Desarrollo de proyectos personales y profesionales, ademas de aplicación en la práctica de los conocimientos adquiridos.",
+    date: "Ago 2021 - actualidad",
+  },
+  {
+    id: 3,
+    title: "Javascript",
+    subtitle: "Coderhouse",
+    description: "Curso de 10 semanas donde aprendí los fundamentos del lenguaje Javascript. Aplique tecnicas de desarrollo para apps modernas con AJAX. Tambien resolvi ejercicios de logicas con el lenguaje.",
+    date: "Mar 2022 - May 2022",
+  },
+  {
+    id: 4,
+    title: "Java",
+    subtitle: "Universidad Tecnologica de Buenos Aires (UTN)",
+    description: "Curso de 12 semanas donde aprendi los fundamentos de la programacion con el lenguaje Java.",
+    date: "Oct 2021 - Dic 2021",
+  },
+]

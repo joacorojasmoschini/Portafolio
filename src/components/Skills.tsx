@@ -11,7 +11,7 @@ const Skills = ({
 }) => {
   return (
     <motion.div
-      initial={{ x: "-2000px" }}
+      initial={{ x: "-1000px" }}
       animate={isSkillInView ? { x: 0 } : {}}
       className="bg-blue sm:p-4 p-8 flex flex-wrap justify-center rounded-sm w-full md:w-10/12 min-h-full"
     >
@@ -21,9 +21,9 @@ const Skills = ({
       </h4>
       {skill.map((skill, index) => (
         <motion.div
-          initial={{ x: "-1000px" }}
+          initial={{ x: "-5000px" }}
           animate={isSkillInView ? { x: 0 } : {}}
-          transition={{ delay: index * 0.12 }}
+          transition={{ delay: index * 0.2 }}
           key={index}
           className="flex items-center justify-center m-3 text-center"
         >
