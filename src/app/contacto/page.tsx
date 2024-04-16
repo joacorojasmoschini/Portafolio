@@ -59,11 +59,8 @@ const Contact = () => {
           <h2 className="text-3xl mb-12 font-bold">
             CONTACTAME <span className="text-light-red">.</span>
           </h2>
-          <motion.form
+          <form
             onSubmit={handleSubmit}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
             className="flex flex-col gap-6 w-full px-2 mx-auto"
           >
             <div className="flex gap-x-5 w-full">
@@ -108,7 +105,7 @@ const Contact = () => {
               </span>
               <MdKeyboardDoubleArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-500 absolute text-2xl" />
             </button>
-          </motion.form>
+          </form>
         </div>
       </div>
     </motion.div>

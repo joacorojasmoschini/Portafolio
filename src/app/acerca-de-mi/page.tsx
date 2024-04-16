@@ -90,7 +90,7 @@ const About = () => {
       transition={{ delay: 0.8, duration: 1 }}
     >
       <div className="lg:flex xl:h-screen">
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 xl:pt-36 flex flex-col lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 xl:pt-20 flex flex-col lg:w-2/3 lg:pr-0 xl:w-1/2">
           <div className="flex flex-col gap-12 justify-center">
             <h1 className="font-bold text-3xl">
               ACERCA DE MI <span className="text-light-red">.</span>
@@ -108,7 +108,7 @@ const About = () => {
             initial={{ opacity: 0.2, y: 0 }}
             animate={{ opacity: 1, y: 10 }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            className="hidden pt-16 lg:flex flex-row items-center"
+            className="hidden pt-8 lg:flex flex-row items-center"
           >
             <span className="mr-1">SKILLS</span>
             <div>
