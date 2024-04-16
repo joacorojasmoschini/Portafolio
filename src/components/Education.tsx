@@ -1,12 +1,19 @@
 import { experienceData } from "@/lib/data";
+import { motion } from "framer-motion";
 
-const Education = () => {
+const Education = ({ isEducationInView }: { isEducationInView: boolean }) => {
   return (
     <div className="flex flex-col divide-y divide-slate-200">
       <div className="w-full md:pb-40">
         <div className="-my-6">
           {experienceData.map((data) => (
-            <div key={data.id} className="relative py-6 pl-8 sm:pl-32 group">
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              animate={isEducationInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ delay: data.id}}
+              key={data.id}
+              className="relative py-6 pl-8 sm:pl-32 group"
+            >
               <h3 className="mb-1 text-2xl font-bold sm:mb-0">{data.title}</h3>
               <div
                 className="flex flex-col sm:flex-row items-start mb-1 
@@ -28,7 +35,7 @@ const Education = () => {
                 </div>
               </div>
               <div className="text-slate-400">{data.description}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

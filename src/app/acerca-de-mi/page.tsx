@@ -32,11 +32,15 @@ const About = () => {
   const containerRef = useRef<HTMLElement | null>(null);
   const skillTitleRef = useRef<HTMLDivElement | null>(null);
   const skillRef = useRef<HTMLDivElement | null>(null);
+  const educationTitleRef = useRef<HTMLDivElement | null>(null);
+  const educationRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const isSkillInView = useInView(skillRef);
   const isSkillTitleInView = useInView(skillTitleRef);
+  const isEducationTitleInView = useInView(educationTitleRef);
+  const isEducationInView = useInView(educationRef);
 
   const skillsData = [
     {
@@ -97,8 +101,7 @@ const About = () => {
               tecnología y de a poco me fui metiendo en el mundo IT, comencé con
               el lenguaje de programación Java, asistiendo a un curso del mismo
               en la UTN, luego me adentre en el desarrollo web con el lenguaje
-              de JavaScript. Actualmente me encuentro cursando la carrera de
-              ingenieria en sistemas.
+              de JavaScript.
             </p>
           </div>
           <motion.div
@@ -142,10 +145,17 @@ const About = () => {
         </div>
       </div>
       <div className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
-        <h3 className="font-bold text-2xl">
+        <motion.h3
+          ref={educationTitleRef}
+          initial={{ x: -300 }}
+          animate={isEducationTitleInView ? { x: 0 } : {}}
+          className="font-bold text-2xl"
+        >
           EDUCACIÓN <span className="text-light-red">.</span>
-        </h3>
-        <Education />
+        </motion.h3>
+        <div ref={educationRef}>
+          <Education isEducationInView={isEducationInView} />
+        </div>
       </div>
     </motion.div>
   );
