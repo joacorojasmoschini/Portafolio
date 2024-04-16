@@ -22,6 +22,14 @@ export const projectsData = [
   },
   {
     id: 3,
+    title: "SURTONICA RECORDS / JUANSE",
+    skills: ["Nodejs", "Express", "MongoDB", "JWT", "AWS S3"],
+    image: "/projects/juanse.jpg",
+    description: "Desarrolle el Back-end para un dashboard de una productora musical que cuenta con dos sitios web diferentes. Cuanta con autenticación, CRUD y las imagenes se alojan en el servicio S3 de AWS.",
+    repository: "https://github.com/joacorojasmoschini/BE-juanse"
+  },
+  {
+    id: 4,
     title: "FUNDACION ANIMAL",
     skills: [
       "Nodejs",
@@ -36,7 +44,7 @@ export const projectsData = [
     image: "/projects/fundacion-animal.jpg",
     deploy: "https://fe-shelter.vercel.app/",
     description:
-      "Lidere un proyecto academico junto a 6 compañeros para un web de refugio de animales. Mi tarea principal fue centrado en el Back-end brindando autenticacion en las rutas y armado de CRUD para el dashboard.",
+      "Lidere un proyecto academico junto a 6 compañeros para una web de refugio de animales. Mi tarea principal fue centrado en el Back-end brindando autenticacion en las rutas y armado de CRUD para el dashboard.",
     repository: "https://github.com/T1Scaynet/BE-Shelter",
   },
 ];
