@@ -20,7 +20,7 @@ const Projects = () => {
     >
       <div className="max-w-screen-lg mx-auto py-16">
         <div className="text-center">
-          <h2 className="text-3xl text-white pb-6">PROYECTOS <span className="text-light-red">.</span></h2>
+          <h1 className="text-3xl text-white pb-6 font-bold">PROYECTOS <span className="text-light-red">.</span></h1>
           <p className="max-w-sm mx-auto">
             Te invito a que eches un vistazo a mis proyectos realizados. Vas a
             encontrar trabajos Front-end, Back-end y Full-Stack.

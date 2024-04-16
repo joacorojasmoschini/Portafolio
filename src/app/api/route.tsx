@@ -7,7 +7,7 @@ export const POST = async (req: Request) => {
   if (
     !body.name ||
     !body.email ||
-    !body.phone ||
+    !body.subject ||
     !body.message
   ) {
     return NextResponse.json({ msg: "incomplete fields" }, { status: 400 });
@@ -26,8 +26,8 @@ export const POST = async (req: Request) => {
   const mailOptions = {
     from: `${process.env.EMAIL}`,
     to: `joaquin.rojasmoschini@gmail.com`,
-    subject: "Nuevo contacto desde el formulario",
-    text: `Nombre: ${body.name}\nEmail: ${body.email}\nNumero de telefono: ${body.phone}\nMensaje: ${body.message}`,
+    subject: `${body.subject}`,
+    text: `Nombre: ${body.name}\nEmail: ${body.email}\nMensaje: ${body.message}`,
   };
 
   try {
