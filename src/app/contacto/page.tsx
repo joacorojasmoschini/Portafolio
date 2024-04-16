@@ -54,7 +54,7 @@ const Contact = () => {
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
     >
-      <div className="mx-auto py-32 text-center flex items-center justify-center h-full">
+      <div className="mx-auto py-20 md:py-32 text-center flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-screen-md">
           <h2 className="text-3xl mb-12 font-bold">
             CONTACTAME <span className="text-light-red">.</span>
@@ -64,7 +64,7 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2 }}
-            className="flex flex-col gap-6 w-full mx-auto"
+            className="flex flex-col gap-6 w-full px-2 mx-auto"
           >
             <div className="flex gap-x-5 w-full">
               <input
