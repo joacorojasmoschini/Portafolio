@@ -125,7 +125,7 @@ const About = () => {
         className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12"
       >
         <motion.h3
-          initial={{ x: "-1000", opacity: 0 }}
+          initial={{ x: "-1000px", opacity: 0 }}
           animate={isSkillTitleInView ? { x: 0, opacity: 1 } : {}}
           className="font-bold text-2xl"
         >

@@ -29,7 +29,6 @@ const Skills = ({
         >
           <span className="text-3xl mr-2">{skill.icon}</span>
           {skill.name}
-          {console.log(index)}
         </motion.div>
       ))}
     </motion.div>
