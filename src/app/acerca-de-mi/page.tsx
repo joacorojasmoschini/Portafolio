@@ -146,7 +146,7 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
+      <div className="p-4 pb-16 sm:p-8 sm:pb-32 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
         <motion.h3
           ref={educationTitleRef}
           initial={{ x: -300, opacity: 0 }}
