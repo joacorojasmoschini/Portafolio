@@ -28,7 +28,7 @@ const Transition = ({ children }: { children: ReactNode }) => {
           transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
         />
         <motion.div
-          className="top-0 bottom-0 right-0 left-0 m-auto  fixed z-50 w-fit h-fit text-white text-5xl"
+          className="top-0 bottom-0 right-0 left-0 m-auto  fixed z-50 w-fit h-fit text-white text-center text-5xl"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
