@@ -31,12 +31,12 @@ const Home = () => {
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
     >
-      <div className="w-full flex max-w-screen-lg mx-auto">
+      <div className="w-full h-full sm:flex max-w-screen-lg mx-auto pb-8 sm:pb-0">
         <div className="mx-auto">
           <div className="text-center flex flex-col h-full justify-center lg:text-left container">
             <h4 className="text-white/80">FULL STACK DEVELOPER</h4>
-            <h1 className="text-3xl mb-6">
-              TRANSFORAMANDO IDEAS <br />
+            <h1 className="text-2xl sm:text-3xl mb-6">
+              TRANSFORAMANDO IDEAS <br className="hidden sm:block" />
               EN <span className="text-light-red"> EXPERIENCIAS DIGITALES</span>
             </h1>
             <p className="max-w-sm lg:max-w-xl mx-auto lg:mx-0 text-white/70">
@@ -64,13 +64,13 @@ const Home = () => {
               a mis clientes.
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
-            <div className="flex gap-4 justify-center items-center">
+          <div className="flex flex-col pt-4 lg:flex-row gap-4 justify-center items-center">
+            <div className="flex-fit sm:flex gap-4 justify-center items-center">
               {pathData.map((data, index) => (
                 <Link
                   href={data.path}
                   key={index}
-                  className="flex bg-light-blue/10 p-4 gap-x-2 rounded-sm items-center justify-center hover:bg-light-blue/50 duration-200"
+                  className="flex bg-light-blue/10 p-2 sm:p-4 gap-x-2 my-1 rounded-sm items-center justify-center hover:bg-light-blue/50 duration-200"
                 >
                   <div className="text-light-red text-xl">{data.icon}</div>
                   <div>{data.name}</div>
@@ -82,7 +82,7 @@ const Home = () => {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2 sm:w-fit rounded-sm"
+              className="flex bg-red/90 text-blue gap-x-2 justify-center items-center p-4 hover:bg-light-red/80 duration-200 w-1/2 sm:w-fit rounded-sm text-center"
             >
               <div className="text-blue">
                 <FaDownload />

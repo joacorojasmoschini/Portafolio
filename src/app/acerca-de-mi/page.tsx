@@ -84,7 +84,7 @@ const About = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="h-full w-screen"
       initial={{ x: "100%" }}
       animate={{ x: "0%" }}
       transition={{ delay: 0.8, duration: 1 }}
@@ -120,11 +120,13 @@ const About = () => {
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
-      <div className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
+      <div
+        ref={skillTitleRef}
+        className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12"
+      >
         <motion.h3
-          ref={skillTitleRef}
-          initial={{ x: -300 }}
-          animate={isSkillTitleInView ? { x: 0 } : {}}
+          initial={{ x: "-1000", opacity: 0 }}
+          animate={isSkillTitleInView ? { x: 0, opacity: 1 } : {}}
           className="font-bold text-2xl"
         >
           SKILLS<span className="text-light-red">.</span>
@@ -147,8 +149,8 @@ const About = () => {
       <div className="p-4 sm:p-8 md:p-12 lg:px-20 xl:px-48 xl:pt-8 flex flex-col gap-12">
         <motion.h3
           ref={educationTitleRef}
-          initial={{ x: -300 }}
-          animate={isEducationTitleInView ? { x: 0 } : {}}
+          initial={{ x: -300, opacity: 0 }}
+          animate={isEducationTitleInView ? { x: 0, opacity: 1 } : {}}
           className="font-bold text-2xl"
         >
           EDUCACIÓN <span className="text-light-red">.</span>

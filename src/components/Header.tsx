@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 
 const Header = () => {
   return (
@@ -18,8 +19,12 @@ const Header = () => {
           >
             <FaLinkedin className="hover:text-light-red cursor-pointer duration-300" />
           </Link>
+
           <Link href="https://github.com/joacorojasmoschini" target="_blank">
             <FaGithub className="hover:text-light-red cursor-pointer duration-300" />
+          </Link>
+          <Link href="mailto:joaquin.rojasmoschini@gmail.com">
+            <SiGmail className="hover:text-light-red cursor-pointer duration-300" />
           </Link>
           <Link href="https://wa.me/542944124324" target="_blank">
             <FaWhatsapp className="hover:text-light-red cursor-pointer duration-300" />
